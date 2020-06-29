@@ -4,11 +4,13 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.patterns.builder.BuilderActivity
+import com.example.patterns.decorator.DecoratorActivity
 import com.example.patterns.observer.ObserverActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
+    @ExperimentalStdlibApi
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -20,6 +22,10 @@ class MainActivity : AppCompatActivity() {
 
         vButtonObserver.setOnClickListener {
             startActivity(Intent(this, ObserverActivity::class.java))
+        }
+
+        vButtonDecorator.setOnClickListener {
+            startActivity(Intent(this, DecoratorActivity::class.java))
         }
 
 
