@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.patterns.builder.BuilderActivity
 import com.example.patterns.decorator.DecoratorActivity
 import com.example.patterns.observer.ObserverActivity
+import com.example.patterns.strategy.StrategyActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -26,6 +27,10 @@ class MainActivity : AppCompatActivity() {
 
         vButtonDecorator.setOnClickListener {
             startActivity(Intent(this, DecoratorActivity::class.java))
+        }
+
+        vButtonStrategy.setOnClickListener {
+            startActivity(Intent(this, StrategyActivity::class.java))
         }
 
 
