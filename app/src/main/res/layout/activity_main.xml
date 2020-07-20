@@ -22,12 +22,13 @@
         android:id="@+id/vButtonBuilder"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Builder"
         android:layout_margin="16dp"
+        android:text="Builder"
         app:layout_constraintBottom_toTopOf="@+id/vButtonObserver"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.4"
         app:layout_constraintVertical_chainStyle="packed" />
 
     <Button
@@ -47,10 +48,36 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Decorator"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/vButtonStrategy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vButtonObserver" />
+
+    <Button
+        android:id="@+id/vButtonStrategy"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Strategy"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/vButtonAdapter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vButtonDecorator" />
+
+    <Button
+        android:id="@+id/vButtonAdapter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Adapter"
         android:layout_margin="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/vButtonObserver" />
+        app:layout_constraintTop_toBottomOf="@+id/vButtonStrategy" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

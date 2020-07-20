@@ -3,6 +3,7 @@ package com.example.patterns
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.patterns.adapter.AdapterActivity
 import com.example.patterns.builder.BuilderActivity
 import com.example.patterns.decorator.DecoratorActivity
 import com.example.patterns.observer.ObserverActivity
@@ -33,6 +34,9 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, StrategyActivity::class.java))
         }
 
+        vButtonAdapter.setOnClickListener {
+            startActivity(Intent(this, AdapterActivity::class.java))
+        }
 
     }
 }
