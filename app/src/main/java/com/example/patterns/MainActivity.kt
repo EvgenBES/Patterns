@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.patterns.adapter.AdapterActivity
 import com.example.patterns.builder.BuilderActivity
+import com.example.patterns.command.CommandActivity
 import com.example.patterns.decorator.DecoratorActivity
 import com.example.patterns.observer.ObserverActivity
 import com.example.patterns.strategy.StrategyActivity
@@ -12,7 +13,6 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    @ExperimentalStdlibApi
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -36,6 +36,10 @@ class MainActivity : AppCompatActivity() {
 
         vButtonAdapter.setOnClickListener {
             startActivity(Intent(this, AdapterActivity::class.java))
+        }
+
+        vButtonCommand.setOnClickListener {
+            startActivity(Intent(this, CommandActivity::class.java))
         }
 
     }
